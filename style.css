@@ -1,0 +1,246 @@
+/* - Almost White: hsl(0, 0%, 98%)
+- Medium Gray: hsl(0, 0%, 41%)
+- Almost Black: hsl(0, 0%, 8%) */
+:root{
+    --awhite-color:hsl(0, 0%, 88%);
+    --almost-Black: hsl(0, 0%, 8%);
+    --medium-gray: hsl(0, 0%, 41%);
+}
+ 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* utilities */
+body{
+    background: var(--awhite-color);
+    width: 100%;
+    
+}
+.ovalay{display: none; }
+.btn-bars_mobile{
+    display: none;
+}
+.mobile{
+   display: none;
+      
+}
+.menu-cancle{
+    display: none;
+}
+.bar{
+    display: none;
+    position: relative;
+}
+.menu-icon{
+    display: none;
+    
+}
+.container{
+    margin:  auto 30px;
+    
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--almost-Black);
+}
+
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; 
+    overflow: hidden;
+    /* background-color: blue; */
+}
+nav ul{
+    display: flex;
+    /* margin-right: 40rem; */
+    /* float: right; */
+    
+}
+nav ul li{
+    padding-right: 1.5rem; 
+}
+.btn-bars .btn-login{
+    /* padding-right: 30px; */
+    /* border: 1px solid #000; */
+}
+.btn-bars .btn-register{
+    /* padding-right: 20px; */
+    
+   /* border: 1px solid #000; */
+}
+
+/* hero */
+.hero{
+    margin: auto 3rem;
+    
+}
+.grid {
+   display: grid;
+   gap: 3rem;
+   grid-template-columns: 1fr 1fr;  
+    align-items: center;
+}
+.col-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 82%;
+  margin-left: 30px;
+  
+}
+.col-content h1{
+    font-weight: 700;
+    font-size: 70px;
+    padding-bottom: 2rem;
+}
+.col-content p{
+    padding-bottom:  2rem;
+    /* font-size: 1px; */
+    font-family: 'Times New Roman', Times, serif;
+}
+.btn-lm{
+    margin-bottom:  3rem;
+    width: 100px;
+    padding: 6px;
+    background-color: var(--almost-Black);
+    color: var(--awhite-color);
+    border: none;
+    border-radius: 5px;
+}
+
+.hero-img{
+    max-width: 60%;
+    object-fit: contain;
+    margin-left: 50px;
+}
+.hero-icons{
+    display: flex;
+    justify-content: space-around;
+}
+.hero-icons img{
+    max-width: 30%;
+    height: 4vh;
+}
+
+
+/* media screen */
+/* - Desktop: 1440px */
+@media (max-width:1250px){
+ /* body{background: rgb(222, 213, 159);} */
+ .header nav{
+    margin-left: 30px;
+ }
+ .btn-bars .btn-login{
+    margin-left:  -200px;
+    /* border: 1px solid #000; */
+}
+.hero{
+    padding-top: 50px;
+}
+.col-content h1{
+    font-size: 50px;
+}
+} 
+
+
+@media (min-width:800px) and  (max-width:1024px){
+    
+
+    .btn-bars .btn-login{        
+        margin-left:  -300px;
+
+    }
+    /* body{background: rgb(162, 9, 40);} */
+}
+@media (max-width:768px){
+    .container{
+        margin: auto 50px;
+    }
+    nav{
+       display: block;
+    }
+    .col-content{
+        grid-column: span 2;
+        order: 1;
+        width: 100%;
+        /* align-items: justify ; */
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hero-img{
+        max-width: 100%;
+        align-items: center;
+    }
+    .btn-bars{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    .menu-icon{
+        display: flex;
+        font-size: 25px;
+        cursor: pointer;
+        position: fixed;
+        right: 2rem;
+    }
+    .nav-mobile{
+        position: fixed;
+        top: 0px;
+        height: 100vh;
+        width: 70%;
+        right: 0;
+        background: #fff;
+        
+    }
+    .mobile{
+        display: flex;
+       position: fixed;
+          z-index: 1000;
+          top: 30px;
+          right: 8rem;
+
+         
+    }
+    .mobile ul{
+        display:block;
+        margin-top: 4rem;      
+         line-height: 5rem;
+    }
+.menu-cancle{
+    display:block;
+    z-index: 10000;
+    cursor: pointer;
+    position: fixed;
+    right: 2em;
+    top: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.btn-bars_mobile{
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+    position: fixed;
+    top: 28rem;
+    right:5rem;
+    line-height: 3rem;
+}
+.logo{
+    position: fixed;
+}
+}
+
+
+
+
